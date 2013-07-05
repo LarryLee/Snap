@@ -30,6 +30,8 @@
 @synthesize tableView = _tableView;
 @synthesize startButton = _startButton;
 
+@synthesize delegate = _delegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,6 +51,10 @@
     self.nameTextField.font = [UIFont rw_snapFontWithSize:20.0f];
     
     [self.startButton rw_applySnapStyle];
+    
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self.nameTextField action:@selector(resignFirstResponder)];
+    gestureRecognizer.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:gestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,7 +75,7 @@
 
 - (IBAction)exitAction:(id)sender
 {
-    
+    [self.delegate hostViewControllerDidCancel:self];
 }
 
 #pragma mark - UITableViewDataSource
@@ -82,6 +88,14 @@
 - (NSInteger)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
 }
 
 @end

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class HostViewController;
+
+@protocol HostViewControllerDelegate <NSObject>
+
+- (void)hostViewControllerDidCancel:(HostViewController *)controller;
+
+@end
+
 @interface HostViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+
+@property (nonatomic, weak) id <HostViewControllerDelegate> delegate;
 
 @end

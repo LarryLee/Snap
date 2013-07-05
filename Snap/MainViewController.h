@@ -1,6 +1,6 @@
 
 #import "HostViewController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <HostViewControllerDelegate>
 
 @end

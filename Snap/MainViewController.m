@@ -64,6 +64,7 @@ BOOL _buttonsEnabled;
         [self performExitAnimationWithCompletionBlock:^(BOOL finished)
          {
             HostViewController *controller = [[HostViewController alloc] initWithNibName:@"HostViewController" bundle:nil];
+             controller.delegate = self;
             [self presentViewController:controller animated:NO completion:nil];
          }];
     }
@@ -193,6 +194,13 @@ BOOL _buttonsEnabled;
           }
                           completion:nil];
      }];
+}
+
+#pragma mark - HostViewControllerDelegate
+
+- (void)hostViewControllerDidCancel:(HostViewController *)controller
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end
