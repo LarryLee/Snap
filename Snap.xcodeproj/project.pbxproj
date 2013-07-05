@@ -279,7 +279,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = Hollance;
+				ORGANIZATIONNAME = "Dylan Bettermann";
 			};
 			buildConfigurationList = 7B67D9D014C9C6AC00254619 /* Build configuration list for PBXProject "Snap" */;
 			compatibilityVersion = "Xcode 3.2";

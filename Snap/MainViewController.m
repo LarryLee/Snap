@@ -1,5 +1,6 @@
 
 #import "MainViewController.h"
+#import "UIFont+SnapAdditions.h"
 
 @interface MainViewController ()
 @property (nonatomic, weak) IBOutlet UIImageView *sImageView;
@@ -24,6 +25,15 @@
 @synthesize hostGameButton = _hostGameButton;
 @synthesize joinGameButton = _joinGameButton;
 @synthesize singlePlayerGameButton = _singlePlayerGameButton;
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.hostGameButton.titleLabel.font = [UIFont rw_snapFontWithSize:20.0f];
+    self.joinGameButton.titleLabel.font = [UIFont rw_snapFontWithSize:20.0f];
+    self.singlePlayerGameButton.titleLabel.font = [UIFont rw_snapFontWithSize:20.0f];
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
