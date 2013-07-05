@@ -57,6 +57,7 @@
 		7BF49EB114EBBC7400AB8472 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF49EAF14EBBC7400AB8472 /* Default@2x.png */; };
 		FCDFE994178663650088CF7E /* Action_Man.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCDFE993178663650088CF7E /* Action_Man.ttf */; };
 		FCDFE997178663C20088CF7E /* UIFont+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFE996178663C20088CF7E /* UIFont+SnapAdditions.m */; };
+		FCDFE99B1786703A0088CF7E /* UIButton+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFE99A1786703A0088CF7E /* UIButton+SnapAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,8 @@
 		FCDFE993178663650088CF7E /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Action_Man.ttf; sourceTree = SOURCE_ROOT; };
 		FCDFE995178663C20088CF7E /* UIFont+SnapAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+SnapAdditions.h"; path = "Snap/UIFont+SnapAdditions.h"; sourceTree = "<group>"; };
 		FCDFE996178663C20088CF7E /* UIFont+SnapAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+SnapAdditions.m"; path = "Snap/UIFont+SnapAdditions.m"; sourceTree = "<group>"; };
+		FCDFE9991786703A0088CF7E /* UIButton+SnapAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SnapAdditions.h"; sourceTree = "<group>"; };
+		FCDFE99A1786703A0088CF7E /* UIButton+SnapAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SnapAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +249,8 @@
 		FCDFE998178663CB0088CF7E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				FCDFE9991786703A0088CF7E /* UIButton+SnapAdditions.h */,
+				FCDFE99A1786703A0088CF7E /* UIButton+SnapAdditions.m */,
 				FCDFE995178663C20088CF7E /* UIFont+SnapAdditions.h */,
 				FCDFE996178663C20088CF7E /* UIFont+SnapAdditions.m */,
 			);
@@ -359,6 +364,7 @@
 				7B67D9EB14C9C6AD00254619 /* AppDelegate.m in Sources */,
 				7BF49E3114E1FCF400AB8472 /* MainViewController.m in Sources */,
 				FCDFE997178663C20088CF7E /* UIFont+SnapAdditions.m in Sources */,
+				FCDFE99B1786703A0088CF7E /* UIButton+SnapAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
