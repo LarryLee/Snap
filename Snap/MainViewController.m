@@ -72,6 +72,16 @@ BOOL _buttonsEnabled;
 
 - (IBAction)joinGameAction:(id)sender
 {
+    if (_buttonsEnabled)
+	{
+		[self performExitAnimationWithCompletionBlock:^(BOOL finished)
+         {
+             JoinViewController *controller = [[JoinViewController alloc] initWithNibName:@"JoinViewController" bundle:nil];
+             controller.delegate = self;
+             
+             [self presentViewController:controller animated:NO completion:nil];
+         }];
+	}
 }
 
 - (IBAction)singlePlayerGameAction:(id)sender
@@ -199,6 +209,13 @@ BOOL _buttonsEnabled;
 #pragma mark - HostViewControllerDelegate
 
 - (void)hostViewControllerDidCancel:(HostViewController *)controller
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+#pragma mark - JoinViewControllerDelegate
+
+- (void)joinViewControllerDidCancel:(JoinViewController *)controller
 {
     [self dismissViewControllerAnimated:NO completion:nil];
 }
