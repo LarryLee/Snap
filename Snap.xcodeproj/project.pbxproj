@@ -56,6 +56,8 @@
 		7BF49EB014EBBC7400AB8472 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF49EAE14EBBC7400AB8472 /* Default.png */; };
 		7BF49EB114EBBC7400AB8472 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF49EAF14EBBC7400AB8472 /* Default@2x.png */; };
 		FCB5D16D17877747006ECC5F /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5D16C17877747006ECC5F /* JoinViewController.m */; };
+		FCB5D16F17877C6E006ECC5F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB5D16E17877C6E006ECC5F /* GameKit.framework */; };
+		FCB5D17317877E33006ECC5F /* MatchmakingServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5D17217877E33006ECC5F /* MatchmakingServer.m */; };
 		FCDFE994178663650088CF7E /* Action_Man.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCDFE993178663650088CF7E /* Action_Man.ttf */; };
 		FCDFE997178663C20088CF7E /* UIFont+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFE996178663C20088CF7E /* UIFont+SnapAdditions.m */; };
 		FCDFE99B1786703A0088CF7E /* UIButton+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFE99A1786703A0088CF7E /* UIButton+SnapAdditions.m */; };
@@ -119,6 +121,10 @@
 		7BF49EAF14EBBC7400AB8472 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FCB5D16B17877747006ECC5F /* JoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinViewController.h; sourceTree = "<group>"; };
 		FCB5D16C17877747006ECC5F /* JoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinViewController.m; sourceTree = "<group>"; };
+		FCB5D16E17877C6E006ECC5F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		FCB5D17017877CBE006ECC5F /* Snap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Snap-Prefix.pch"; sourceTree = "<group>"; };
+		FCB5D17117877E33006ECC5F /* MatchmakingServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchmakingServer.h; path = Snap/MatchmakingServer.h; sourceTree = "<group>"; };
+		FCB5D17217877E33006ECC5F /* MatchmakingServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchmakingServer.m; path = Snap/MatchmakingServer.m; sourceTree = "<group>"; };
 		FCDFE993178663650088CF7E /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Action_Man.ttf; sourceTree = SOURCE_ROOT; };
 		FCDFE995178663C20088CF7E /* UIFont+SnapAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+SnapAdditions.h"; path = "Snap/UIFont+SnapAdditions.h"; sourceTree = "<group>"; };
 		FCDFE996178663C20088CF7E /* UIFont+SnapAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+SnapAdditions.m"; path = "Snap/UIFont+SnapAdditions.m"; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB5D16F17877C6E006ECC5F /* GameKit.framework in Frameworks */,
 				7B739AC614EC9DFE00A07C50 /* AVFoundation.framework in Frameworks */,
 				7B67D9DB14C9C6AD00254619 /* UIKit.framework in Frameworks */,
 				7B67D9DD14C9C6AD00254619 /* Foundation.framework in Frameworks */,
@@ -193,6 +200,7 @@
 		7B67D9CB14C9C6AC00254619 = {
 			isa = PBXGroup;
 			children = (
+				FCB5D17417877E40006ECC5F /* Networking */,
 				FCDFE998178663CB0088CF7E /* Categories */,
 				7BF3E7CF151DF3680091A397 /* View Controllers */,
 				7BF3E7D0151DF3720091A397 /* Other Sources */,
@@ -214,6 +222,7 @@
 		7B67D9D914C9C6AD00254619 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCB5D16E17877C6E006ECC5F /* GameKit.framework */,
 				7B739AC514EC9DFE00A07C50 /* AVFoundation.framework */,
 				7B67D9DE14C9C6AD00254619 /* CoreGraphics.framework */,
 				7B67D9DC14C9C6AD00254619 /* Foundation.framework */,
@@ -225,6 +234,7 @@
 		7B67D9E114C9C6AD00254619 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FCB5D17017877CBE006ECC5F /* Snap-Prefix.pch */,
 				FCDFE993178663650088CF7E /* Action_Man.ttf */,
 				7B67D9E314C9C6AD00254619 /* InfoPlist.strings */,
 				7B67D9E214C9C6AD00254619 /* Snap-Info.plist */,
@@ -257,6 +267,15 @@
 				7B67D9E814C9C6AD00254619 /* Snap-Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		FCB5D17417877E40006ECC5F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FCB5D17117877E33006ECC5F /* MatchmakingServer.h */,
+				FCB5D17217877E33006ECC5F /* MatchmakingServer.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		FCDFE998178663CB0088CF7E /* Categories */ = {
@@ -381,6 +400,7 @@
 				FCDFE99B1786703A0088CF7E /* UIButton+SnapAdditions.m in Sources */,
 				FCDFE99E1787139B0088CF7E /* HostViewController.m in Sources */,
 				FCB5D16D17877747006ECC5F /* JoinViewController.m in Sources */,
+				FCB5D17317877E33006ECC5F /* MatchmakingServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
