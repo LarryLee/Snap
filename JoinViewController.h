@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MatchmakingClient.h"
 
 @class JoinViewController;
 

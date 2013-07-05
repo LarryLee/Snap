@@ -23,6 +23,9 @@
 @end
 
 @implementation JoinViewController
+{
+    MatchmakingClient *_matchmakingClient;
+}
 
 @synthesize headingLabel = _headingLabel;
 @synthesize nameLabel = _nameLabel;
@@ -63,6 +66,20 @@
     self.waitView = nil;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+	if (_matchmakingClient == nil)
+	{
+		_matchmakingClient = [[MatchmakingClient alloc] init];
+		[_matchmakingClient startSearchingForServersWithSessionID:SESSION_ID];
+        
+		self.nameTextField.placeholder = _matchmakingClient.session.displayName;
+		[self.tableView reloadData];
+	}
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -72,6 +89,11 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
+}
+
+- (IBAction)exitAction:(id)sender
+{
+    [self.delegate joinViewControllerDidCancel:self];
 }
 
 #pragma mark - UITableViewDataSource

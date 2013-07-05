@@ -16,8 +16,9 @@
 @end
 
 @implementation MainViewController
-
-BOOL _buttonsEnabled;
+{
+    BOOL _buttonsEnabled;
+}
 
 @synthesize sImageView = _sImageView;
 @synthesize nImageView = _nImageView;

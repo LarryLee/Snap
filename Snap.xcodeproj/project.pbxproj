@@ -58,6 +58,8 @@
 		FCB5D16D17877747006ECC5F /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5D16C17877747006ECC5F /* JoinViewController.m */; };
 		FCB5D16F17877C6E006ECC5F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB5D16E17877C6E006ECC5F /* GameKit.framework */; };
 		FCB5D17317877E33006ECC5F /* MatchmakingServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5D17217877E33006ECC5F /* MatchmakingServer.m */; };
+		FCB5D177178788B7006ECC5F /* JoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB5D175178788B7006ECC5F /* JoinViewController.xib */; };
+		FCB5D17A1787897B006ECC5F /* MatchmakingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5D1791787897B006ECC5F /* MatchmakingClient.m */; };
 		FCDFE994178663650088CF7E /* Action_Man.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCDFE993178663650088CF7E /* Action_Man.ttf */; };
 		FCDFE997178663C20088CF7E /* UIFont+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFE996178663C20088CF7E /* UIFont+SnapAdditions.m */; };
 		FCDFE99B1786703A0088CF7E /* UIButton+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFE99A1786703A0088CF7E /* UIButton+SnapAdditions.m */; };
@@ -125,6 +127,9 @@
 		FCB5D17017877CBE006ECC5F /* Snap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Snap-Prefix.pch"; sourceTree = "<group>"; };
 		FCB5D17117877E33006ECC5F /* MatchmakingServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchmakingServer.h; path = Snap/MatchmakingServer.h; sourceTree = "<group>"; };
 		FCB5D17217877E33006ECC5F /* MatchmakingServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchmakingServer.m; path = Snap/MatchmakingServer.m; sourceTree = "<group>"; };
+		FCB5D176178788B7006ECC5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Snap/en.lproj/JoinViewController.xib; sourceTree = "<group>"; };
+		FCB5D1781787897B006ECC5F /* MatchmakingClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchmakingClient.h; sourceTree = "<group>"; };
+		FCB5D1791787897B006ECC5F /* MatchmakingClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchmakingClient.m; sourceTree = "<group>"; };
 		FCDFE993178663650088CF7E /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Action_Man.ttf; sourceTree = SOURCE_ROOT; };
 		FCDFE995178663C20088CF7E /* UIFont+SnapAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+SnapAdditions.h"; path = "Snap/UIFont+SnapAdditions.h"; sourceTree = "<group>"; };
 		FCDFE996178663C20088CF7E /* UIFont+SnapAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+SnapAdditions.m"; path = "Snap/UIFont+SnapAdditions.m"; sourceTree = "<group>"; };
@@ -246,6 +251,7 @@
 		7BF3E7CF151DF3680091A397 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCB5D175178788B7006ECC5F /* JoinViewController.xib */,
 				FCDFE99F178714020088CF7E /* HostViewController.xib */,
 				7BF49E2E14E1FCF400AB8472 /* MainViewController.h */,
 				7BF49E2F14E1FCF400AB8472 /* MainViewController.m */,
@@ -272,6 +278,8 @@
 		FCB5D17417877E40006ECC5F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FCB5D1781787897B006ECC5F /* MatchmakingClient.h */,
+				FCB5D1791787897B006ECC5F /* MatchmakingClient.m */,
 				FCB5D17117877E33006ECC5F /* MatchmakingServer.h */,
 				FCB5D17217877E33006ECC5F /* MatchmakingServer.m */,
 			);
@@ -383,6 +391,7 @@
 				7B01147B151B432C00A0616D /* Icon-Small-50@2x.png in Resources */,
 				FCDFE994178663650088CF7E /* Action_Man.ttf in Resources */,
 				FCDFE9A1178714020088CF7E /* HostViewController.xib in Resources */,
+				FCB5D177178788B7006ECC5F /* JoinViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +410,7 @@
 				FCDFE99E1787139B0088CF7E /* HostViewController.m in Sources */,
 				FCB5D16D17877747006ECC5F /* JoinViewController.m in Sources */,
 				FCB5D17317877E33006ECC5F /* MatchmakingServer.m in Sources */,
+				FCB5D17A1787897B006ECC5F /* MatchmakingClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +432,14 @@
 			);
 			name = MainViewController.xib;
 			path = Snap;
+			sourceTree = "<group>";
+		};
+		FCB5D175178788B7006ECC5F /* JoinViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCB5D176178788B7006ECC5F /* en */,
+			);
+			name = JoinViewController.xib;
 			sourceTree = "<group>";
 		};
 		FCDFE99F178714020088CF7E /* HostViewController.xib */ = {
