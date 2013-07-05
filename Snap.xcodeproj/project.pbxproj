@@ -58,6 +58,8 @@
 		FCDFE994178663650088CF7E /* Action_Man.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCDFE993178663650088CF7E /* Action_Man.ttf */; };
 		FCDFE997178663C20088CF7E /* UIFont+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFE996178663C20088CF7E /* UIFont+SnapAdditions.m */; };
 		FCDFE99B1786703A0088CF7E /* UIButton+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFE99A1786703A0088CF7E /* UIButton+SnapAdditions.m */; };
+		FCDFE99E1787139B0088CF7E /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFE99D1787139B0088CF7E /* HostViewController.m */; };
+		FCDFE9A1178714020088CF7E /* HostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDFE99F178714020088CF7E /* HostViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +121,9 @@
 		FCDFE996178663C20088CF7E /* UIFont+SnapAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+SnapAdditions.m"; path = "Snap/UIFont+SnapAdditions.m"; sourceTree = "<group>"; };
 		FCDFE9991786703A0088CF7E /* UIButton+SnapAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SnapAdditions.h"; sourceTree = "<group>"; };
 		FCDFE99A1786703A0088CF7E /* UIButton+SnapAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SnapAdditions.m"; sourceTree = "<group>"; };
+		FCDFE99C1787139B0088CF7E /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
+		FCDFE99D1787139B0088CF7E /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
+		FCDFE9A0178714020088CF7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Snap/en.lproj/HostViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +233,11 @@
 		7BF3E7CF151DF3680091A397 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCDFE99F178714020088CF7E /* HostViewController.xib */,
 				7BF49E2E14E1FCF400AB8472 /* MainViewController.h */,
 				7BF49E2F14E1FCF400AB8472 /* MainViewController.m */,
+				FCDFE99C1787139B0088CF7E /* HostViewController.h */,
+				FCDFE99D1787139B0088CF7E /* HostViewController.m */,
 				7BF49E3314E1FD3200AB8472 /* MainViewController.xib */,
 			);
 			name = "View Controllers";
@@ -350,6 +358,7 @@
 				7B01147A151B432C00A0616D /* Icon-72@2x.png in Resources */,
 				7B01147B151B432C00A0616D /* Icon-Small-50@2x.png in Resources */,
 				FCDFE994178663650088CF7E /* Action_Man.ttf in Resources */,
+				FCDFE9A1178714020088CF7E /* HostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +374,7 @@
 				7BF49E3114E1FCF400AB8472 /* MainViewController.m in Sources */,
 				FCDFE997178663C20088CF7E /* UIFont+SnapAdditions.m in Sources */,
 				FCDFE99B1786703A0088CF7E /* UIButton+SnapAdditions.m in Sources */,
+				FCDFE99E1787139B0088CF7E /* HostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +396,14 @@
 			);
 			name = MainViewController.xib;
 			path = Snap;
+			sourceTree = "<group>";
+		};
+		FCDFE99F178714020088CF7E /* HostViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCDFE9A0178714020088CF7E /* en */,
+			);
+			name = HostViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
