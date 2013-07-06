@@ -67,6 +67,7 @@
 	if (_matchmakingServer == nil)
 	{
 		_matchmakingServer = [[MatchmakingServer alloc] init];
+        _matchmakingServer.delegate = self;
 		_matchmakingServer.maxClients = 3;
 		[_matchmakingServer startAcceptingConnectionsForSessionID:SESSION_ID];
         
@@ -114,6 +115,18 @@
 {
     [textField resignFirstResponder];
     return NO;
+}
+
+#pragma mark - MatchmakingServerDelegate
+
+- (void)matchmakingServer:(MatchmakingServer *)server clientDidConnect:(NSString *)peerID
+{
+	[self.tableView reloadData];
+}
+
+- (void)matchmakingServer:(MatchmakingServer *)server clientDidDisconnect:(NSString *)peerID
+{
+	[self.tableView reloadData];
 }
 
 @end

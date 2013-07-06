@@ -123,6 +123,21 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (_matchmakingClient != nil)
+    {
+        [self.view addSubview:self.waitView];
+        
+        NSString *peerID = [_matchmakingClient peerIDForAvailableServerAtIndex:indexPath.row];
+        [_matchmakingClient connectToServerWithPeerID:peerID];
+    }
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
