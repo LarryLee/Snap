@@ -9,6 +9,7 @@
 #import "HostViewController.h"
 #import "UIButton+SnapAdditions.h"
 #import "UIFont+SnapAdditions.h"
+#import "PeerCell.h"
 
 @interface HostViewController ()
 
@@ -101,10 +102,30 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    if (_matchmakingServer != nil)
+        return [_matchmakingServer connectedClientCount];
+    else
+        return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"CellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[PeerCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSString *peerID = [_matchmakingServer peerIDForConnectedClientAtIndex:indexPath.row];
+    cell.textLabel.text = [_matchmakingServer displayNameForPeerID:peerID];
+    
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
 }

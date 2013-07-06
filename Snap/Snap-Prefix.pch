@@ -12,3 +12,12 @@
 #endif
 
 #define SESSION_ID @"Snap!"
+
+typedef enum
+{
+    QuitReasonNoNetwork,
+    QuitReasonConnectionDropped,
+    QuitReasonUserQuit,
+    QuitReasonServerQuit,
+}
+QuitReason;

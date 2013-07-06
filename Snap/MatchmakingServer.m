@@ -102,6 +102,19 @@ ServerState;
     #ifdef DEBUG
     NSLog(@"MatchmakingServer: connection request from peer %@", peerID);
     #endif
+    
+    if (_serverState == ServerStateAcceptingConnections && [self connectedClientCount] < self.maxClients)
+    {
+        NSError *error;
+        if ([session acceptConnectionFromPeer:peerID error:&error]) 
+            NSLog(@"MatchmakingServer: Connection accepted from peer %@", peerID);
+        else
+            NSLog(@"MatchmakingServer: Error accepting connection from peer %@, %@", peerID, error);
+    }
+    else // not accepting connections or too many clients
+    {
+        [session denyConnectionFromPeer:peerID];
+    }
 }
 
 - (void)session:(GKSession *)session connectionWithPeerFailed:(NSString *)peerID withError:(NSError *)error
@@ -116,6 +129,21 @@ ServerState;
     #ifdef DEBUG
 	NSLog(@"MatchmakingServer: session failed %@", error);
     #endif
+}
+
+- (NSUInteger)connectedClientCount
+{
+    return [_connectedClients count];
+}
+
+- (NSString *)peerIDForConnectedClientAtIndex:(NSUInteger)index
+{
+    return [_connectedClients objectAtIndex:index];
+}
+
+- (NSString *)displayNameForPeerID:(NSString *)peerID
+{
+    return [_session displayNameForPeer:peerID];
 }
 
 

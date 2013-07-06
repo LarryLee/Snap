@@ -221,4 +221,27 @@
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
+- (void)joinViewController:(JoinViewController *)controller didDisconnectWithReason:(QuitReason)reason
+{
+	if (reason == QuitReasonConnectionDropped)
+	{
+		[self dismissViewControllerAnimated:NO completion:^
+         {
+             [self showDisconnectedAlert];
+         }];
+	}
+}
+
+- (void)showDisconnectedAlert
+{
+	UIAlertView *alertView = [[UIAlertView alloc]
+                              initWithTitle:NSLocalizedString(@"Disconnected", @"Client disconnected alert title")
+                              message:NSLocalizedString(@"You were disconnected from the game.", @"Client disconnected alert message")
+                              delegate:nil
+                              cancelButtonTitle:NSLocalizedString(@"OK", @"Button: OK")
+                              otherButtonTitles:nil];
+    
+	[alertView show];
+}
+
 @end
