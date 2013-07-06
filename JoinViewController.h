@@ -17,7 +17,7 @@
 
 @end
 
-@interface JoinViewController : UIViewController
+@interface JoinViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, MatchmakingClientDelegate>
 
 @property (nonatomic, weak) id <JoinViewControllerDelegate> delegate;
 
